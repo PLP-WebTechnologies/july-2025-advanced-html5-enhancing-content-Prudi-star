@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matric Results Collection Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        header, nav, main, footer {
+            padding: 1rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #004d40;
+            font-weight: bold;
+        }
+        form {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #bbb;
+        }
+        th, td {
+            padding: 0.5rem;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        audio, video {
+            display: block;
+            margin-top: 1rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Matric Results Collection Portal</h1>
+    <p>Register to securely receive your 2024 Matric Results</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#info">Information</a></li>
+        <li><a href="#table">Collection Dates</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">Registration</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="info">
+        <h2>How It Works</h2>
+        <p>Follow these steps to get your results quickly and securely:</p>
+        <ol>
+            <li>Fill in the online registration form below.</li>
+            <li>Verify your identity at the collection centre.</li>
+            <li>Receive your printed or digital matric results.</li>
+        </ol>
+        <img src="https://via.placeholder.com/800x300?text=Matric+Celebration" alt="Students celebrating matric results">
+    </section>
+
+    <section id="table">
+        <h2>Collection Dates & Locations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20 Jan 2025</td>
+                    <td>Johannesburg Central Hall</td>
+                    <td>09:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>21 Jan 2025</td>
+                    <td>Pretoria City Library</td>
+                    <td>09:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>22 Jan 2025</td>
+                    <td>Cape Town Community Centre</td>
+                    <td>10:00 - 14:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Helpful Resources</h2>
+        <h3>Motivational Audio</h3>
+        <audio controls>
+            <source src="https://music.youtub.com" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video: How to Access Your Matric Results Online</h3>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form">
+        <h2>Matric Results Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="idnum">ID Number:</label>
+            <input type="text" id="idnum" name="idnum" placeholder="13-digit ID number" pattern="\d{13}" required>
+
+            <label for="examnum">Examination Number:</label>
+            <input type="text" id="examnum" name="examnum" placeholder="Enter your exam number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 082-123-4567" 
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+            <label for="delivery">Preferred Delivery Method:</label>
+            <select id="delivery" name="delivery" required>
+                <option value="">--Select Option--</option>
+                <option value="email">Email (PDF)</option>
+                <option value="sms">SMS Summary</option>
+                <option value="pickup">Physical Collection</option>
+            </select>
+
+            <label for="comments">Additional Notes:</label>
+            <textarea id="comments" name="comments" placeholder="Write something..." rows="4"></textarea>
+
+            <label>
+                <input type="checkbox" name="terms" required> I confirm that the information provided is correct.
+            </label>
+
+            <label for="readonly-info">Registration Reference (readonly):</label>
+            <input type="text" id="readonly-info" value="MAT2025-REG" readonly>
+
+            <button type="submit" style="margin-top: 1rem; padding: 0.5rem 1rem;">Submit Registration</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Department of Basic Education - Matric Results Portal</p>
+</footer>
+</body>
+</html>
